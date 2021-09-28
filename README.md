@@ -14,11 +14,11 @@ This is the general Blogging site where people can post news,articles related to
 - CSS
   
 # Install
-<h1>Clone the repository<h1>
+Clone the repository
  ```bash 
  https://github.com/Sankeerthan-RN/Blogging-Site-Flask.git 
  ```
- <h1>Install the requirements and run app.py to start the application<h1>
+ Install the requirements and run app.py to start the application
   
  ```bash 
   pip install -r requirements.txt
