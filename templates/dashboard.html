@@ -1,0 +1,44 @@
+
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+  body{
+    background-image: url('/static/images/dashboard.png');
+ background-size: cover;
+  }
+</style>
+   <p class="font"> DASHBOARD </p>
+  <a class="btn btn-success" href="{{url_for('create_article')}}"> Add Article</a>
+  <hr>
+  {% if msg!='No Articles Found' %}
+  <table  class="table table-striped ">
+    <tr >
+      <!-- <th>ID</th> -->
+      <th>Title</th>
+      <th>Author</th>
+      <th>Created on</th>
+      <th></th>
+      <th></th>
+    </tr>
+    
+    {% for article in articles %}
+      <tr>
+        <!-- <td>{{article.id}}</td> -->
+        <td>{{article.title}}</td>
+
+        <td>{{article.author}}</td>
+        <td>{{article.create_date}}</td>
+        <td><a href="{{url_for('edit_article',id=article.id)}}" class="btn btn-info pull-right">Edit</a></td>
+        <td>
+         
+          <form action="{{url_for('delete_article',id=article.id)}}" method="post">
+            <!-- <input type="hidden" name="_method" value="DELETE"> -->
+            <input type="submit" value="Delete" class="btn btn-danger">
+          </form>
+        </td>
+    {% endfor %}
+  </table>
+  {% endif %}
+{% endblock %}

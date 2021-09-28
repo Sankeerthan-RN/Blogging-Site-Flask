@@ -1,0 +1,14 @@
+{%extends 'layout.html' %}
+
+{% block body %}
+<style>
+  body{
+    background-image: url('/static/images/home.png');
+ background-size: cover;
+  }
+</style>
+<div class="jumbotron text-center ">
+    <h1>Welcome {{session.username}}</h1>
+</div>
+
+{% endblock %}

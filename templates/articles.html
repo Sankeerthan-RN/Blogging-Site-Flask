@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+  body{
+    background-image: url('/static/images/article.png');
+ background-size: cover;
+  }
+</style>
+  <h1 class="font">Articles</h1>
+  
+  <ul class="list-group">
+    {% for article in articles %}
+      <li class="list-group-item">
+        <span class="badge">
+          {{(article.create_date)}}
+          </span>
+        <a style="font-size: large;" href="{{url_for('article',id=article.id)}}">{{article.title}}</a><p >{{article.author}}</p>
+      </li>
+        
+       
+    {% endfor %}
+  </ul>
+  <ul class="list-group">
+    
+  </ul>
+{% endblock %}

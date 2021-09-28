@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  {% if title %}
+  <title> {{ title }}</title>
+  {% else %}
+  <title>"Flask-Blog"</title>
+  {% endif %}
+    <meta charset="utf-8">
+    <title>MyFlaskApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+   
+
+    
+    <link href='https://fonts.googleapis.com/css?family=Lexend Exa' rel='stylesheet'>
+    
+    
+  </head>
+  <style>
+
+   </style>
+  
+ 
+  <body>
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+     {% include 'includes/messages.html'%}
+      {% block body %}{% endblock %}
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script> -->
+    <script>
+      CKEDITOR.replace('editor')
+      </script>
+    
+  </body>
+</html>

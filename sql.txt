@@ -1,0 +1,14 @@
+
+use Blogapp;
+#For user table creation
+create table users(id INT(11) auto_increment primary key,firstname varchar(100) not null ,lastname varchar(100),email varchar(100) not null,username varchar(100) not null,password varchar(100) not null,register_date timestamp default current_timestamp);
+
+#For Article table creation
+create table articles(id INT(11) auto_increment primary key,title varchar(200) not null ,author varchar(100) not null,body text not null,create_date timestamp default current_timestamp);
+
+show tables;
+describe articles;
+select  *from users;
+SELECT * FROM  articles;
+
+#Insert,Delete and Update Query is in app.py

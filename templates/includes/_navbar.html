@@ -1,0 +1,30 @@
+<nav class="navbar navbar"  style="background-color: #093e64;">
+  <div class="container"  >
+    <div class="navbar-header">
+    
+     
+    </div>
+    <div id="navbar"  class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav">
+        <li><a class="link" href="{{url_for('index')}} ">Home</a></li>
+        <li><a  class="link" href="{{url_for('articles')}}">Articles</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+      <li><a  class="link"  href="{{url_for('about')}}">About</a></li>
+       {% if session.logged %}
+       <li><a   class="link" href="{{url_for('dashboard')}}">Dashboard</a></li>
+        <li><a  class="link"  href="{{url_for('logout')}}">logout</a></li></li>
+  
+        {% else %}
+        <li><a  class="link"  href="{{url_for('register')}}">Register</a></li></li>
+        <li><a   class="link" href="{{url_for('login')}}">Login</a></li></li>
+        {% endif %}
+        
+        </ul> 
+
+
+     
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

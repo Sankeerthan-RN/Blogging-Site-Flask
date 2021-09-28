@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="jumbotron">
+ 
+  <h1 class="display-4">{{article.title}}</h1>
+  <p class="label label-info">Written by {{article.author}} </p>
+  <hr>
+  
+  <div>
+    {{article.body | safe}}
+  </div>
+
+</div>
+{% endblock %}
