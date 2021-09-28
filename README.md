@@ -15,7 +15,6 @@ This is the general Blogging site where people can post news,articles related to
   
 # Install
 <h1>Clone the repository<h1>
-<br>
  ```bash 
  https://github.com/Sankeerthan-RN/Blogging-Site-Flask.git 
  ```
