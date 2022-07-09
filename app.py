@@ -132,7 +132,7 @@ def create_article():
         flash('ARTICLE created','success')
         return redirect(url_for('dashboard'))
     else:
-        return render_template('add_article.html',form=form)       
+        return render_template('create_article.html',form=form)
 
 @app.route('/register',methods=['POST','GET'])
 def register():
